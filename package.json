@@ -1,24 +1,30 @@
 {
-	"dependencies": {
-		"@expo/metro-runtime": "~3.2.3",
-		"expo": "~51.0.28",
-		"expo-status-bar": "~1.12.1",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"react-native": "0.74.5",
-		"react-native-web": "~0.19.10"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.20.0"
-	},
-	"main": "expo/AppEntry.js",
-	"name": "app-ui-exercise",
-	"private": true,
-	"scripts": {
-		"android": "expo start --android --port 5453",
-		"ios": "expo start --ios --port 5453",
-		"start": "expo start --port 5453",
-		"web": "expo start --web --port 5453"
-	},
-	"version": "1.0.0"
+  "dependencies": {
+    "@expo/metro-runtime": "~3.2.3",
+    "expo": "~51.0.28",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-web": "~0.19.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "eslint": "^8.57.0",
+    "eslint-config-expo": "^7.1.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
+  },
+  "main": "expo/AppEntry.js",
+  "name": "app-ui-exercise",
+  "private": true,
+  "scripts": {
+    "android": "expo start --android --port 5453",
+    "ios": "expo start --ios --port 5453",
+    "start": "expo start --port 5453",
+    "web": "expo start --web --port 5453",
+    "lint": "eslint ."
+  },
+  "version": "1.0.0"
 }

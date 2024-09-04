@@ -1,0 +1,15 @@
+{
+	"arrowParens": "avoid",
+	"bracketSameLine": true,
+	"bracketSpacing": true,
+	"embeddedLanguageFormatting": "auto",
+	"endOfLine": "auto",
+	"proseWrap": "preserve",
+	"quoteProps": "as-needed",
+	"requirePragma": false,
+	"semi": false,
+	"singleAttributePerLine": true,
+	"tabWidth": 2,
+	"useTabs": true,
+	"vueIndentScriptAndStyle": false
+}

@@ -1,3 +1,3 @@
 {
-	"conventionalCommits.scopes": ["App", "Components"]
+	"conventionalCommits.scopes": ["App", "Components", "Screen"]
 }

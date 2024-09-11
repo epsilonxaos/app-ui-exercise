@@ -1,7 +1,7 @@
 import { Text, TouchableHighlight } from "react-native"
 import { colors } from "../styles/colors"
 
-const Button = ({ children }) => {
+const Button = ({ children, onPress }) => {
 	return (
 		<TouchableHighlight
 			style={{
@@ -9,10 +9,11 @@ const Button = ({ children }) => {
 				padding: 10,
 				borderRadius: 10,
 				marginBottom: 20,
+				width: "100%",
 			}}
 			activeOpacity={0.6}
 			underlayColor={colors.royalBlueTouch}
-			onPress={() => alert("Pressed!")}>
+			{...{ onPress }}>
 			<Text
 				style={{
 					color: colors.white,

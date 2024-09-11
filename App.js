@@ -1,27 +1,31 @@
 import { StatusBar } from "expo-status-bar"
-import { StyleSheet, View } from "react-native"
-import Main from "./components/Main"
+import { Platform, StyleSheet, View } from "react-native"
 
 import { SafeAreaProvider } from "react-native-safe-area-context"
+import LoginScreen from "./src/screens/LoginScreen"
+
+import "./src/assets/css/global.css"
 
 export default function App() {
 	return (
 		<SafeAreaProvider>
-			<View style={styles.container}>
+			<View style={app.container}>
 				<StatusBar style="dark" />
 
-				<Main />
+				<LoginScreen />
 			</View>
 		</SafeAreaProvider>
 	)
 }
 
-const styles = StyleSheet.create({
+const app = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#eaeaea",
-		alignItems: "center",
-		justifyContent: "flex-start",
-		paddingHorizontal: 20,
+		backgroundColor: "#ffffff",
+		fontFamily: Platform.select({
+			android: "Inter_400Regular",
+			ios: "Inter-Regular",
+		}),
+		paddingHorizontal: 0,
 	},
 })

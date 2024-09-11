@@ -1,27 +1,39 @@
 {
-  "expo": {
-    "name": "app-ui-exercise",
-    "slug": "app-ui-exercise",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
-  }
+	"expo": {
+		"android": {
+			"adaptiveIcon": {
+				"backgroundColor": "#ffffff",
+				"foregroundImage": "./assets/adaptive-icon.png"
+			}
+		},
+		"icon": "./assets/icon.png",
+		"ios": {
+			"supportsTablet": true
+		},
+		"name": "app-ui-exercise",
+		"orientation": "portrait",
+		"plugins": [
+			"expo-font",
+			{
+				"fonts": [
+					"node_modules/@expo-google-fonts/inter/Inter_400Regular.ttf",
+					"node_modules/@expo-google-fonts/inter/Inter_500Medium.ttf",
+					"node_modules/@expo-google-fonts/inter/Inter_600SemiBold.ttf",
+					"node_modules/@expo-google-fonts/inter/Inter_700Bold.ttf",
+					"node_modules/@expo-google-fonts/inter/Inter_900Black.ttf"
+				]
+			}
+		],
+		"slug": "app-ui-exercise",
+		"splash": {
+			"backgroundColor": "#ffffff",
+			"image": "./assets/splash.png",
+			"resizeMode": "contain"
+		},
+		"userInterfaceStyle": "light",
+		"version": "1.0.0",
+		"web": {
+			"favicon": "./assets/favicon.png"
+		}
+	}
 }

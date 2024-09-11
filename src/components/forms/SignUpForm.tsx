@@ -1,20 +1,14 @@
-import {
-	Linking,
-	Text,
-	TouchableHighlight,
-	TouchableOpacity,
-	View,
-} from "react-native"
-import Input from "../Input"
 import { useState } from "react"
+import { Linking, Text, TouchableOpacity, View } from "react-native"
 import { colors } from "../../styles/colors"
 import Button from "../Button"
+import Input from "../Input"
 
 const emailIcon = require("../../assets/img/icons/email.png")
 const userIcon = require("../../assets/img/icons/user.png")
 const phoneIcon = require("../../assets/img/icons/phone.png")
 
-const LoginForm = () => {
+const SignUpForm = () => {
 	const [email, setEmail] = useState("")
 	const [fullName, setFullName] = useState("")
 	const [phone, setPhone] = useState("")
@@ -32,7 +26,7 @@ const LoginForm = () => {
 					fontWeight: 900,
 					marginBottom: 20,
 				}}>
-				Sing Up
+				Sign Up
 			</Text>
 
 			<View>
@@ -95,4 +89,4 @@ const LoginForm = () => {
 	)
 }
 
-export default LoginForm
+export default SignUpForm

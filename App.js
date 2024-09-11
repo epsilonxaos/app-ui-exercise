@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar"
 import { Platform, StyleSheet, View } from "react-native"
 
 import { SafeAreaProvider } from "react-native-safe-area-context"
-import LoginScreen from "./src/screens/LoginScreen"
+import SignUpScreen from "./src/screens/SignUpScreen"
 
 import "./src/assets/css/global.css"
 
@@ -12,7 +12,7 @@ export default function App() {
 			<View style={app.container}>
 				<StatusBar style="dark" />
 
-				<LoginScreen />
+				<SignUpScreen />
 			</View>
 		</SafeAreaProvider>
 	)

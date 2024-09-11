@@ -1,13 +1,10 @@
-import { Image, StyleSheet, Text, View } from "react-native"
+import { Image, StyleSheet, View } from "react-native"
 import SafeViewArea from "../components/SafeViewArea"
-import Input from "../components/Input"
-import LoginForm from "../components/forms/LoginForm"
-import Button from "../components/Button"
-import { colors } from "../styles/colors"
+import SignUpForm from "../components/forms/SignUpForm"
 
-const singUp = require("../assets/img/singUp.png")
+const signUp = require("../assets/img/singUp.png")
 
-const LoginScreen = () => {
+const SignUpScreen = () => {
 	return (
 		<SafeViewArea>
 			<View
@@ -20,12 +17,12 @@ const LoginScreen = () => {
 					flex: 1,
 				}}>
 				<Image
-					source={singUp}
+					source={signUp}
 					style={screen.cover}
 				/>
 			</View>
 
-			<LoginForm />
+			<SignUpForm />
 		</SafeViewArea>
 	)
 }
@@ -33,11 +30,10 @@ const LoginScreen = () => {
 const screen = StyleSheet.create({
 	cover: {
 		flex: 1,
-		// height: 300,
 		objectFit: "contain",
 		marginBottom: 30,
 		resizeMode: "center",
 	},
 })
 
-export default LoginScreen
+export default SignUpScreen

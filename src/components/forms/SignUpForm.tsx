@@ -8,7 +8,7 @@ const emailIcon = require("../../assets/img/icons/email.png")
 const userIcon = require("../../assets/img/icons/user.png")
 const phoneIcon = require("../../assets/img/icons/phone.png")
 
-const SignUpForm = () => {
+const SignUpForm = ({ navigation }) => {
 	const [email, setEmail] = useState("")
 	const [fullName, setFullName] = useState("")
 	const [phone, setPhone] = useState("")
@@ -18,18 +18,20 @@ const SignUpForm = () => {
 			style={{
 				flex: 1,
 				width: "100%",
-				paddingHorizontal: 40,
+				paddingHorizontal: 30,
+				flexDirection: "column",
+				justifyContent: "space-between",
 			}}>
-			<Text
-				style={{
-					fontSize: 40,
-					fontWeight: 900,
-					marginBottom: 20,
-				}}>
-				Sign Up
-			</Text>
-
 			<View>
+				<Text
+					style={{
+						fontSize: 40,
+						fontWeight: 900,
+						marginBottom: 20,
+					}}>
+					Sign Up
+				</Text>
+
 				<Input
 					label="Email ID"
 					icon={emailIcon}
@@ -48,28 +50,28 @@ const SignUpForm = () => {
 					value={phone}
 					onChangeText={setPhone}
 				/>
-			</View>
 
-			<View
-				style={{
-					flexDirection: "row",
-					flex: 1,
-					flexWrap: "wrap",
-					margin: 0,
-					gap: 4,
-				}}>
-				<Text style={{ color: colors.slateGray }}>
-					By signing up, you're agree to our
-				</Text>
-				<TouchableOpacity
-					onPress={() => Linking.openURL("http://google.com.mx")}>
-					<Text style={{ color: colors.royalBlue }}>Terms & Conditions</Text>
-				</TouchableOpacity>
-				<Text style={{ color: colors.slateGray }}>and</Text>
-				<TouchableOpacity
-					onPress={() => Linking.openURL("http://google.com.mx")}>
-					<Text style={{ color: colors.royalBlue }}>Privacy Policy</Text>
-				</TouchableOpacity>
+				<View
+					style={{
+						flexDirection: "row",
+						flex: 1,
+						flexWrap: "wrap",
+						marginBottom: 30,
+						gap: 4,
+					}}>
+					<Text style={{ color: colors.slateGray }}>
+						By signing up, you're agree to our
+					</Text>
+					<TouchableOpacity
+						onPress={() => Linking.openURL("http://google.com.mx")}>
+						<Text style={{ color: colors.royalBlue }}>Terms & Conditions</Text>
+					</TouchableOpacity>
+					<Text style={{ color: colors.slateGray }}>and</Text>
+					<TouchableOpacity
+						onPress={() => Linking.openURL("http://google.com.mx")}>
+						<Text style={{ color: colors.royalBlue }}>Privacy Policy</Text>
+					</TouchableOpacity>
+				</View>
 			</View>
 
 			<View
@@ -77,9 +79,9 @@ const SignUpForm = () => {
 					// flex: 1,
 					paddingBottom: 20,
 					width: "100%",
-					paddingHorizontal: 40,
+					paddingHorizontal: 20,
 				}}>
-				<Button>Continue</Button>
+				<Button onPress={() => navigation.navigate("Home")}>Continue</Button>
 
 				<Text style={{ color: colors.slateGray, textAlign: "center" }}>
 					Join us before? Login

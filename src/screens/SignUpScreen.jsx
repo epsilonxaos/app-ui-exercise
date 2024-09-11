@@ -1,10 +1,10 @@
-import { Image, StyleSheet, View } from "react-native"
+import { Image, ScrollView, StyleSheet, View } from "react-native"
 import SafeViewArea from "../components/SafeViewArea"
 import SignUpForm from "../components/forms/SignUpForm"
 
 const signUp = require("../assets/img/singUp.png")
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ navigation }) => {
 	return (
 		<SafeViewArea>
 			<View
@@ -13,7 +13,7 @@ const SignUpScreen = () => {
 					flexWrap: "wrap",
 					alignItems: "flex-start",
 					justifyContent: "flex-start",
-					height: 500,
+					height: 400,
 					flex: 1,
 				}}>
 				<Image
@@ -22,7 +22,7 @@ const SignUpScreen = () => {
 				/>
 			</View>
 
-			<SignUpForm />
+			<SignUpForm navigation={navigation} />
 		</SafeViewArea>
 	)
 }
@@ -31,7 +31,7 @@ const screen = StyleSheet.create({
 	cover: {
 		flex: 1,
 		objectFit: "contain",
-		marginBottom: 30,
+		marginBottom: 10,
 		resizeMode: "center",
 	},
 })

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native"
+import { ScrollView, StyleSheet, Text, View } from "react-native"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 const SafeViewArea = ({ children, styleContainer }) => {
@@ -8,10 +8,13 @@ const SafeViewArea = ({ children, styleContainer }) => {
 		<View
 			style={{
 				...{ paddingTop: insets.top, paddingBottom: insets.bottom },
-				...safeArea.container,
 				...styleContainer,
 			}}>
-			{children}
+			<ScrollView
+				keyboardShouldPersistTaps="handled"
+				style={{ width: "100%" }}>
+				<View style={safeArea.container}>{children}</View>
+			</ScrollView>
 		</View>
 	)
 }

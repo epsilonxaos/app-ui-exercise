@@ -5,14 +5,33 @@ import { SafeAreaProvider } from "react-native-safe-area-context"
 import SignUpScreen from "./src/screens/SignUpScreen"
 
 import "./src/assets/css/global.css"
+import { Inter_400Regular, useFonts } from "@expo-google-fonts/inter"
+import * as SplashScreen from "expo-splash-screen"
+import { useEffect } from "react"
+import NavigationApp from "./src/navigation/Navigation"
 
 export default function App() {
+	const [loaded, error] = useFonts({
+		Inter_400Regular,
+	})
+
+	useEffect(() => {
+		if (loaded || error) {
+			SplashScreen.hideAsync()
+		}
+	}, [loaded, error])
+
+	if (!loaded && !error) {
+		return null
+	}
+
 	return (
 		<SafeAreaProvider>
 			<View style={app.container}>
 				<StatusBar style="dark" />
 
-				<SignUpScreen />
+				<NavigationApp />
+				{/* <SignUpScreen /> */}
 			</View>
 		</SafeAreaProvider>
 	)
